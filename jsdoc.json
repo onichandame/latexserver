@@ -1,0 +1,25 @@
+{
+  "plugins": [],
+  "recurseDepth": 10,
+  "source": {
+    "exclude":[
+        "node_modules",
+        "frontend",
+        "out",
+        "public",
+        "build.js",
+        "build"
+      ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc","closure"]
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  }
+}
