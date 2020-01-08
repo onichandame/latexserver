@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "jsdoc -c 'jsdoc.json' -R 'README.md' -r '.' -d 'doc' && node build.js && nodemon server.js --ignore 'asset' --ignore 'node_modules' --ignore 'public' --ignore 'frontend'"
+    "postinstall": "cd frontend && npm install",
+    "start": "jsdoc -c jsdoc.json -R README.md -r . -d doc && node build.js && nodemon server.js --ignore asset --ignore node_modules --ignore public --ignore frontend --ignore package.json"
   },
   "repository": {
     "type": "git",
@@ -29,9 +30,11 @@
     "child-process-promise": "^2.2.1",
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
+    "formidable": "^1.2.1",
     "fs-extra": "^8.1.0",
     "jsdoc": "^3.6.3",
     "nodemon": "^2.0.2",
-    "okitchen": "0.0.5"
+    "okitchen": "0.0.5",
+    "unzipper": "^0.10.5"
   }
 }

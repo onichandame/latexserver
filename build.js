@@ -9,3 +9,9 @@ spawn('npm',['run','build'],{cwd:path.resolve(__dirname,'frontend')})
   .then(()=>{return fs.copy(path.resolve(__dirname,'frontend','build'),path.resolve(__dirname,'public'))})
   .then(()=>{console.log('fontend installed')})
   .catch(e=>{terminate(e)})
+
+function terminate(msg)
+{
+  console.log(typeof msg === 'string' ? msg : JSON.stringify(msg))
+  process.exit(1)
+}

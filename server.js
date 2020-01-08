@@ -11,6 +11,8 @@ const app = express()
 app.use(cookieparser())
 app.use(express.static(path.resolve(__dirname,'public')))
 
+app.use('/new',require(path.resolve(__dirname,'routes','new.js')))
+
 init()
   .then(()=>{
     app.listen(port, function (){
