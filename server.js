@@ -11,7 +11,7 @@ const app = express()
 app.use(cookieparser())
 app.use(express.static(path.resolve(__dirname,'public')))
 
-app.use('/new',require(path.resolve(__dirname,'routes','new.js')))
+app.post('/',require(path.resolve(__dirname,'routes','new.js')))
 
 init()
   .then(()=>{
