@@ -1,0 +1,21 @@
+{
+  "compilerOptions":{
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "declaration": true,
+    "strict": true
+  },
+  "typedocOptions":{
+    "mode": "modules",
+    "out": "docs",
+    "name": "checkpath",
+    "tsconfig": "tsconfig.json",
+    "excludeNotExported": false,
+    "excludePrivate": true,
+    "excludeProtected": true
+  },
+  "include": [
+    "**/src/**/*.ts"
+  ]
+}
